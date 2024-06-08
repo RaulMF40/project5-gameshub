@@ -1,0 +1,187 @@
+@import '../../styles/style.css';
+
+.rtc-connect4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 4rem;
+  width: 100%;
+}
+
+.rtc-connect4-description {
+  font-size: 0.8rem;
+}
+
+.rtc-connect4-game {
+  width: inherit;
+}
+
+.rtc-connect4-reset {
+  background-color: #ffffff;
+  border: 0.3rem solid #cc0000;
+  border-radius: 0.75rem;
+  color: #e60023;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.rtc-connect4-reset:hover {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+.rtc-connect4-board {
+  border: 0.3rem solid navy;
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+}
+
+.rtc-connect4-board-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 100%;
+}
+
+.rtc-connect4-board-box {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rtc-connect4-board-circle {
+  background-color: #ffffff;
+  border: 0.2rem solid navy;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 85%;
+  width: 85%;
+}
+
+.rtc-connect4-board-red_piece,
+.rtc-connect4-board-circle.rtc-connect4-board-red_piece:hover {
+  background-color: red;
+}
+
+.rtc-connect4-board-yellow_piece,
+.rtc-connect4-board-circle.rtc-connect4-board-yellow_piece:hover {
+  background-color: yellow;
+}
+
+.rtc-connect4-board-circle:hover {
+  background-color: skyblue;
+}
+
+@media screen and (min-width: 320px) {
+  .rtc-connect4-board {
+    height: 16rem;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .rtc-connect4 {
+    gap: 2rem;
+  }
+
+  .rtc-connect4-description {
+    font-size: 0.9rem;
+  }
+
+  .rtc-connect4-board {
+    height: 18rem;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .rtc-connect4-description {
+    font-size: 1rem;
+  }
+
+  .rtc-connect4-reset {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 475px) {
+  .rtc-connect4-game {
+    padding: 0 2.5rem;
+  }
+
+  .rtc-connect4-board {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .rtc-connect4-game {
+    padding: 0 4rem;
+  }
+
+  .rtc-connect4-board {
+    height: 22rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .rtc-connect4-game {
+    padding: 0 6rem;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .rtc-connect4-game {
+    padding: 0 8rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .rtc-connect4-game {
+    padding: 0 9rem;
+  }
+
+  .rtc-connect4-board {
+    height: 24rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rtc-connect4 {
+    gap: 2rem;
+  }
+
+  .rtc-connect4-description {
+    font-size: 1.1rem;
+  }
+
+  .rtc-connect4-game {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .rtc-connect4-reset {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.75rem;
+  }
+
+  .rtc-connect4-board {
+    height: 20rem;
+    width: 22rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rtc-connect4 {
+    padding-bottom: 8rem;
+  }
+
+  .rtc-connect4-board {
+    height: 22rem;
+    width: 24rem;
+  }
+}

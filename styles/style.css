@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+:root {
+  font-family: 'Comfortaa', sans-serif;
+  line-height: 1.5;
+
+  background-color: #6fa7a4;
+  color-scheme: light dark;
+  color: #ffffff;
+  margin: 0 0.5rem;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@media screen and (min-width: 350px) {
+  :root {
+    margin: 0 1rem;
+  }
+}

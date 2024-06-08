@@ -1,0 +1,94 @@
+@import '../../styles/style.css';
+
+.rtc-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.rtc-welcome-h1 {
+  font-size: 1.25rem;
+}
+
+.rtc-welcome-games {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rtc-welcome-games-button {
+  background-color: #ffffff;
+  border: 0.3rem solid #0025cc;
+  border-radius: 0.75rem;
+  color: #0049e6;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 1rem 1.75rem 1rem 1.75rem;
+}
+
+.rtc-welcome-games-button:hover {
+  background-color: #08cebe;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 400px) {
+  .rtc-welcome {
+    gap: 6rem;
+    padding: 4rem 0 8rem 0;
+  }
+
+  .rtc-welcome-h1 {
+    font-size: 1.5rem;
+  }
+
+  .rtc-welcome-games-button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rtc-welcome-h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .rtc-welcome {
+    gap: 8rem;
+  }
+
+  .rtc-welcome-h1 {
+    font-size: 2rem;
+  }
+
+  .rtc-welcome-games {
+    gap: 3rem;
+  }
+
+  .rtc-welcome-games-button {
+    font-size: 1.25rem;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+  }
+}
+
+@media screen and (min-height: 900px) {
+  .rtc-welcome {
+    padding: 12rem 0 4rem 0;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .rtc-welcome {
+    padding-top: 16rem;
+  }
+}
+
+@media screen and (min-height: 1100px) {
+  .rtc-welcome {
+    padding-top: 20rem;
+  }
+}

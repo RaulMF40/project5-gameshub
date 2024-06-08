@@ -1,0 +1,343 @@
+@import '../../styles/style.css';
+
+.rtc-trivial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding-bottom: 4rem;
+  width: 100%;
+}
+
+.rtc-trivial-game,
+.rtc-trivial-endgame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 4rem 0 8rem 0;
+}
+
+.rtc-trivial-game.test {
+  gap: 1rem;
+  padding-top: 0;
+}
+
+.rtc-trivial-description,
+.rtc-trivial-play_button {
+  font-size: 1rem;
+}
+
+.rtc-trivial-reset,
+.rtc-trivial-play_button,
+.rtc-trivial-card-answer,
+.rtc-trivial-endgame-form-input {
+  background-color: #ffffff;
+  border: 0.3rem solid #cc0000;
+  border-radius: 0.75rem;
+  color: #e60023;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+}
+
+.rtc-trivial-card-answer,
+.rtc-trivial-endgame-form-input {
+  font-size: 1.1rem;
+}
+
+.rtc-trivial-play_button {
+  padding: 0.5rem 1rem;
+}
+
+.rtc-trivial-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.rtc-trivial-card-question {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.rtc-trivial-card-answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rtc-trivial-card-answer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  width: inherit;
+}
+
+.rtc-trivial-card-answer_text {
+  font-size: 0.75rem;
+}
+
+.rtc-trivial-reset:hover,
+.rtc-trivial-play_button:hover,
+.rtc-trivial-card-answer:hover,
+.rtc-trivial-endgame-form-button {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+.correct {
+  background: linear-gradient(32deg, #0bdf24 0%, #29e86f 100%);
+  border-color: #0bdf24;
+  color: #ffffff;
+}
+
+.incorrect {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+/* HUD */
+
+.rtc-trivial-hud_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.rtc-trivial-hud_item:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: normal;
+}
+
+.rtc-trivial-hud_item-prefix,
+.rtc-trivial-hud_item-progress,
+.rtc-trivial-hud_item-score {
+  font-size: 0.75rem;
+}
+
+/* ENDGAME */
+
+.rtc-trivial-endgame {
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+.rtc-trivial-endgame-final_score {
+  font-size: 1.25rem;
+}
+
+.rtc-trivial-endgame-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rtc-trivial-endgame-form-title {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.rtc-trivial-endgame-form-input {
+  cursor: auto;
+  font-size: 0.75rem;
+  height: 2rem;
+  width: 80%;
+}
+
+.rtc-trivial-endgame-form-input:focus {
+  outline: none;
+}
+
+.rtc-trivial-endgame-form-input::placeholder {
+  color: #aaa;
+}
+
+.rtc-trivial-endgame-form-button {
+  border: 0.3rem solid #cc0000;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-weight: 700;
+  justify-content: center;
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+}
+
+.rtc-trivial-endgame-ranking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.rtc-trivial-endgame-ranking_title,
+.rtc-trivial-endgame-ranking_message {
+  font-size: 1.15rem;
+}
+
+.rtc-trivial-endgame-ranking_scores {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rtc-trivial-endgame-ranking_scores-score {
+  display: flex;
+  gap: 4rem;
+}
+
+.rtc-trivial-endgame-ranking_scores-score > h3 {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .rtc-trivial-game,
+  .rtc-trivial-endgame {
+    gap: 6rem;
+    padding: 8rem 0 12rem 0;
+  }
+
+  .rtc-trivial-game.test {
+    display: grid;
+    grid-template-columns: repeat(3, 25% 50% 20%);
+    grid-gap: 0;
+    padding: 0;
+    width: inherit;
+  }
+
+  /* LOADER */
+
+  .rtc-trivial-loader_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 4rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.25rem #00000080;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  .rtc-trivial-loader {
+    border: 0.8rem solid #f3f3f3;
+    border-top: 0.8rem solid #cc0000;
+    border-radius: 50%;
+    width: 3.25rem;
+    height: 3.25rem;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rtc-trivial-loader_text {
+    color: #333;
+    font-size: 1rem;
+  }
+
+  .rtc-trivial-reset {
+    padding: 0.75rem 2rem;
+  }
+
+  .rtc-trivial-description {
+    font-size: 2rem;
+  }
+
+  .rtc-trivial-play_button,
+  .rtc-trivial-card-answer,
+  .rtc-trivial-endgame-form-title,
+  .rtc-trivial-endgame-form-input {
+    font-size: 1.1rem;
+  }
+
+  .rtc-trivial-play_button,
+  .rtc-trivial-card-answer {
+    padding: 0.5rem 3rem;
+  }
+
+  .rtc-trivial-card {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .rtc-trivial-card-question {
+    text-align: center;
+  }
+
+  .rtc-trivial-card-answers {
+    gap: 1.5rem;
+  }
+
+  .rtc-trivial-card-answer {
+    gap: 2rem;
+  }
+
+  .rtc-trivial-reset,
+  .rtc-trivial-card-question,
+  .rtc-trivial-card-answer_text {
+    font-size: 1rem;
+  }
+
+  .rtc-trivial-hud_item-prefix,
+  .rtc-trivial-hud_item-progress,
+  .rtc-trivial-hud_item-score {
+    font-size: 1rem;
+  }
+
+  .rtc-trivial-endgame {
+    gap: 2rem;
+    padding-top: 4rem;
+  }
+
+  .rtc-trivial-endgame-final_score {
+    font-size: 2.5rem;
+  }
+
+  .rtc-trivial-endgame-form {
+    gap: 1.5rem;
+  }
+
+  .rtc-trivial-endgame-form-input {
+    height: 2.5rem;
+  }
+
+  .rtc-trivial-endgame-form-button {
+    font-size: 1rem;
+    padding: 1rem 3rem;
+  }
+
+  .rtc-trivial-endgame-ranking {
+    gap: 2rem;
+  }
+
+  .rtc-trivial-endgame-ranking_scores {
+    gap: 1.5rem;
+  }
+
+  .rtc-trivial-endgame-ranking_scores-score {
+    display: flex;
+    gap: 16rem;
+  }
+}

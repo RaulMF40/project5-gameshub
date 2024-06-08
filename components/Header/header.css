@@ -1,0 +1,135 @@
+@import '../../styles/style.css';
+
+.rtc-header {
+  display: none;
+}
+
+.rtc-header.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0 2rem 0;
+}
+
+.rtc-header-h1 {
+  cursor: default;
+  font-size: 1.15rem;
+}
+
+.rtc-header-games {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.rtc-header-games-button {
+  background-color: #ddd7d7;
+  border: 0.3rem solid #0e11e2;
+  border-radius: 0.75rem;
+  color: #000fe6;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  width: 5rem;
+}
+
+.rtc-header-games-button:hover {
+  background-color: #08cebe;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 300px) {
+  .rtc-header.open {
+    padding-top: 2rem;
+  }
+
+  .rtc-header-games-button {
+    width: 5.75rem;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .rtc-header-games {
+    gap: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .rtc-header-h1 {
+    font-size: 1.25rem;
+  }
+
+  .rtc-header-games-button {
+    font-size: 0.8rem;
+    width: 6.5rem;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .rtc-header-games {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rtc-header.open {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .rtc-header-h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    width: inherit;
+  }
+
+  .rtc-header-games-button {
+    width: 7rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .rtc-header.open {
+    gap: 4rem;
+  }
+
+  .rtc-header-games {
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .rtc-header.open {
+    gap: 8rem;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .rtc-header.open {
+    gap: 10rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .rtc-header.open {
+    gap: 12rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .rtc-header.open {
+    gap: 16rem;
+  }
+
+  .rtc-header-games {
+    padding-right: 8rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .rtc-header.open {
+    gap: 64rem;
+  }
+}
