@@ -7,7 +7,6 @@ const yellowPlayer = 'Y'
 let currentColumns = [5, 5, 5, 5, 5, 5, 5]
 let currentPlayer = redPlayer
 let gameOver = false
-// Añadimos una función para generar un número aleatorio
 
 const setWinner = (r, c, board, resetButton) => {
   let winnerMessage = document.querySelector('.rtc-connect4-description')
@@ -85,11 +84,15 @@ const checkWinner = (columns, rows, board, resetButton) => {
   }
 }
 
+//! aqui el arreglo para que se reinicie bien el juego y empiece de cero.
 export const resetConnect4Game = (event, board, connect4Circle) => {
   contentRefresh('connect4')
 
-  board = []
+  // Vaciamos el array 'board' y la cadena 'connect4Circle'
+  board.length = 0
   connect4Circle = ''
+
+  // Reiniciamos las variables del juego a sus valores iniciales y volvemos a renderizar el tablero del juego
   currentColumns = [5, 5, 5, 5, 5, 5, 5]
   currentPlayer = redPlayer
   gameOver = false
@@ -136,9 +139,10 @@ const connect4Logic = (
     descriptionGame.innerText = 'Red Turn'
   }
 
-  r -= 1 // Updates the row height for the column after setting the piece inside the column
-  currentColumns[c] = r // Updates the array currentColumns
+  r -= 1
+  currentColumns[c] = r
   checkWinner(columns, rows, board, resetButton)
 }
 
 export default connect4Logic
+
